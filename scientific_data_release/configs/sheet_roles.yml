@@ -1,0 +1,33 @@
+metadata_sequences:
+  metadata: metadata
+  sequences: sequences
+
+experimental:
+  source_study_id: GINKGO_GDPA_SOURCE_BLOCKS
+  blocks:
+    GDPa1:
+      source_study_id: SRC:GINKGO_GDPA1
+      raw: "Assay Data - tidy format"
+      summary: "Assay Data - average "
+    GDPa2:
+      source_study_id: SRC:GINKGO_GDPA2_1
+      raw: "Assay Data - tidy format(2)"
+      summary: "Assay Data - average （2）"
+    GDPa3:
+      source_study_id: SRC:GINKGO_GDPA3
+      raw: "Assay Data - tidy format（3）"
+      summary: "Assay Data - average（3）"
+
+literature:
+  excluded:
+    - link
+  curated_records: all_other_sheets
+
+data_dictionary:
+  readme: "README"
+  workbook_sheet_dictionary: "Workbook Sheet Dictionary"
+  field_dictionary: "Field Dictionary"
+  assay_endpoint_dictionary: "Assay Endpoint Dictionary"
+  controlled_vocabulary_source: "Terminology Missingness"
+  literature_sources: "Literature Sources"
+  release_file_manifest: "Release File Manifest"

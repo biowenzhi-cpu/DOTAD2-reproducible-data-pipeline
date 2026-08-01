@@ -1,0 +1,16 @@
+core_inputs:
+  metadata_sequences:
+    path: assets/data/dotad_antibody_metadata_sequences_v2.0.xlsx
+    sha256: ea818362ac3fd024813a553e1f76d611f3422791d5fdc6cadb256de500f069cd
+  data_dictionary:
+    path: assets/data/dotad_data_dictionary_v2.0.xlsx
+    sha256: 59c7641a1f65f4e0861db8438a2e0afe29bc79cd6705d30d491fcb3049b3f315
+  experimental:
+    path: assets/data/dotad_experimental_developability_v2.0.xlsx
+    sha256: 143f1e30f99423de41a00145816b56f9c5bc06d20d3cf0a8f776155b2318d8d7
+  literature:
+    path: assets/data/dotad_literature_developability_collection_v2.0.xlsx
+    sha256: c643340585a583fd27ee14d95b5720452f054d2ee02888511bcf17667f81a52e
+
+companion_inputs:
+  affinity_collection: assets/data/dotad_affinity_benchmark_v2.0.zip

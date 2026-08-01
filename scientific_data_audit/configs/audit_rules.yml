@@ -1,0 +1,14 @@
+large_file_bytes: 104857600
+large_json_bytes: 52428800
+hash_chunk_bytes: 1048576
+max_sample_values: 3
+max_unique_values_exact: 100000
+blank_row_stop: 1000
+sequence_min_full_chain_length: 50
+sequence_max_chain_length: 2000
+sequence_min_cdr_length: 3
+sequence_max_cdr_length: 80
+amino_acid_alphabet: "ACDEFGHIKLMNPQRSTVWYBXZJUO"
+dna_alphabet: "ACGTUNRYKMSWBDHV"
+source_git_root: "C:/Users/14706/Desktop/DOTAD/DOTAD 2.0"
+expected_archive_top_level: "DOTAD"

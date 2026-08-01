@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: Please cite this software and the DOTAD 2.0 dataset.
+title: DOTAD 2.0 reproducible data release pipeline
+type: software
+version: v2.0.0
+url: https://i.uestc.edu.cn/DOTAD2.0/
+repository-code: https://github.com/bioinfowenz/DOTAD2-reproducible-data-pipeline
+authors:
+- family-names: Li
+  given-names: Wenzhi
+- family-names: Ren
+  given-names: Yimin
+- family-names: Wang
+  given-names: Hongli
+- family-names: Wu
+  given-names: Changchun
+- family-names: Wei
+  given-names: Tongtong
+- family-names: Xie
+  given-names: Lu
+- family-names: Li
+  given-names: Wenzhen
+- family-names: Huang
+  given-names: Jian

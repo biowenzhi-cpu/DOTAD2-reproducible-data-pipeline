@@ -1,0 +1,38 @@
+rules:
+  raw_source:
+    - "(^|/)(raw|source|sources|original)(/|_|$)"
+  source_download:
+    - "references?\\.xlsx$"
+    - "affinity_benchmark.*\\.zip$"
+  literature_curation:
+    - "literature.*\\.(xlsx|csv|tsv|json)$"
+    - "references?\\.(xlsx|csv|tsv|json)$"
+  metadata:
+    - "metadata.*\\.(xlsx|csv|tsv|json)$"
+  sequence:
+    - "sequence.*\\.(xlsx|csv|tsv|json|fasta|fa)$"
+    - "numbering.*\\.json$"
+  experimental_raw:
+    - "experimental.*raw.*\\.(xlsx|csv|tsv|json)$"
+  experimental_summary:
+    - "experimental.*(avg|average|summary).*\\.(xlsx|csv|tsv|json)$"
+  binding_affinity:
+    - "(affinity|binding|titeseq)"
+  benchmark:
+    - "benchmark"
+  intermediate:
+    - "(rollback|backup|tmp|intermediate|derived)"
+  release:
+    - "(^|/)releases?(/|$)"
+  website_export:
+    - "assets/data/.*\\.json$"
+  figure_input:
+    - "(figure|fig)[^/]*input"
+  figure_output:
+    - "(figure|fig|results|output).*(png|pdf|svg|tiff?)$"
+  script:
+    - "\\.(py|r|rmd|ipynb|js|sql|sh|ps1|yml|yaml)$"
+  documentation:
+    - "\\.(md|rst|txt)$"
+  manuscript:
+    - "(manuscript|article).*\\.docx$"

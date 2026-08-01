@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotad2-reproducible-data-pipeline"
+version = "2.0.0"
+description = "Reproducible build and validation code for DOTAD 2.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["scientific_data_audit/tests", "scientific_data_release/tests"]
+pythonpath = ["scientific_data_audit/src", "scientific_data_release/src"]
+addopts = "-ra -m 'not requires_authoritative_data'"
+markers = ["requires_authoritative_data: requires local hash-locked DOTAD source data"]

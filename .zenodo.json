@@ -1,0 +1,36 @@
+{
+  "creators": [
+    {
+      "name": "Wenzhi Li"
+    },
+    {
+      "name": "Yimin Ren"
+    },
+    {
+      "name": "Hongli Wang"
+    },
+    {
+      "name": "Changchun Wu"
+    },
+    {
+      "name": "Tongtong Wei"
+    },
+    {
+      "name": "Lu Xie"
+    },
+    {
+      "name": "Wenzhen Li"
+    },
+    {
+      "name": "Jian Huang"
+    }
+  ],
+  "description": "Reproducible code for DOTAD 2.0. Primary platform: https://i.uestc.edu.cn/DOTAD2.0/",
+  "keywords": [
+    "antibody developability",
+    "data provenance",
+    "reproducible research"
+  ],
+  "license": "MIT",
+  "title": "DOTAD 2.0 reproducible data release pipeline"
+}

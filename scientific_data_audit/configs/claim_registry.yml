@@ -1,0 +1,190 @@
+claims:
+  - id: resource_sequence_unique_entries
+    metric: sequence-unique antibody entries
+    patterns: ["approximately\\s+324[,.]?000", "324[,.]?000\\s+sequence-unique"]
+    value: 324000
+    unit: entries
+    category: resource_size
+    priority: critical
+  - id: resource_annotations
+    metric: curated and standardized developability-related annotations
+    patterns: ["2\\.89\\s+million"]
+    value: 2890000
+    unit: annotations
+    category: resource_size
+    priority: critical
+  - id: dotad1_entries
+    metric: DOTAD 1.0 antibody entries
+    patterns: ["963\\s+antibody entries"]
+    value: 963
+    unit: entries
+    category: resource_size
+    priority: high
+  - id: dotad1_records
+    metric: DOTAD 1.0 developability records
+    patterns: ["11[,.]?139\\s+developability records"]
+    value: 11139
+    unit: records
+    category: resource_size
+    priority: high
+  - id: metadata_subset
+    metric: metadata-covered therapeutic antibody subset
+    patterns: ["metadata-covered therapeutic antibody subset[^\\n]{0,100}(?:included|n\\s*=)\\s*1[,.]?236", "subset (?:of|included|comprising)\\s+1[,.]?236\\s+entries", "n\\s*=\\s*1[,.]?236"]
+    value: 1236
+    unit: antibodies
+    category: subset_size
+    priority: critical
+  - id: whole_mab_count
+    metric: whole monoclonal antibodies
+    patterns: ["whole monoclonal antibodies[^\\n]{0,80}n\\s*=\\s*840", "whole mAb[^\\n]{0,50}840"]
+    value: 840
+    unit: antibodies
+    category: composition
+    priority: high
+  - id: whole_mab_percent
+    metric: whole monoclonal antibody percentage
+    patterns: ["68\\.0%", "68%"]
+    value: 68.0
+    unit: percent
+    category: composition
+    priority: high
+  - id: harmonized_candidate_matrix
+    metric: harmonized-candidate assay matrix
+    patterns: ["harmonized-candidate[^\\n]{0,80}326", "n\\s*=\\s*326"]
+    value: 326
+    unit: antibodies
+    category: subset_size
+    priority: critical
+  - id: complete_case_subset
+    metric: complete-case subset
+    patterns: ["complete-case[^\\n]{0,80}243", "n\\s*=\\s*243"]
+    value: 243
+    unit: antibodies
+    category: subset_size
+    priority: critical
+  - id: representative_assays
+    metric: representative assay readouts
+    patterns: ["eight representative assay readouts", "8 representative assay readouts"]
+    value: 8
+    unit: assays
+    category: coverage
+    priority: high
+  - id: coverage_tm
+    metric: Tm/thermostability coverage
+    patterns: ["Tm/thermostability[^\\n]{0,80}1[,.]?769", "thermostability[^\\n]{0,80}1[,.]?769"]
+    value: 1769
+    unit: antibodies
+    category: coverage
+    priority: high
+  - id: coverage_hic
+    metric: HIC coverage
+    patterns: ["HIC[^\\n]{0,80}803"]
+    value: 803
+    unit: antibodies
+    category: coverage
+    priority: high
+  - id: coverage_smac
+    metric: SMAC coverage
+    patterns: ["SMAC[^\\n]{0,80}789"]
+    value: 789
+    unit: antibodies
+    category: coverage
+    priority: high
+  - id: coverage_ac_sins
+    metric: AC-SINS coverage
+    patterns: ["AC-SINS[^\\n]{0,80}750"]
+    value: 750
+    unit: antibodies
+    category: coverage
+    priority: high
+  - id: coverage_polyreactivity
+    metric: polyreactivity coverage
+    patterns: ["polyreactivity[^\\n]{0,80}707"]
+    value: 707
+    unit: antibodies
+    category: coverage
+    priority: high
+  - id: replicated_pairs
+    metric: replicated cross-source pairs
+    patterns: ["624\\s+(?:replicated\\s+)?(?:antibody-assay\\s+)?pairs", "n\\s+pairs\\s*=\\s*624"]
+    value: 624
+    unit: pairs
+    category: concordance
+    priority: critical
+  - id: cross_source_pearson
+    metric: cross-source Pearson correlation
+    patterns: ["Pearson\\s+r\\s*=\\s*0\\.985"]
+    value: 0.985
+    unit: correlation
+    category: correlation
+    priority: critical
+  - id: cross_source_spearman
+    metric: cross-source Spearman correlation
+    patterns: ["Spearman\\s+(rho|ρ)\\s*=\\s*0\\.865"]
+    value: 0.865
+    unit: correlation
+    category: correlation
+    priority: critical
+  - id: tier_concordance
+    metric: tier concordance
+    patterns: ["tier(-level)?\\s+concordance[^\\n]{0,30}41\\.0%", "tier concordance\\s*=\\s*41\\.0%"]
+    value: 41.0
+    unit: percent
+    category: concordance
+    priority: critical
+  - id: nearest_pairs
+    metric: nearest-neighbor pairs
+    patterns: ["nearest[^\\n]{0,30}n\\s*=\\s*15[,.]?650"]
+    value: 15650
+    unit: pairs
+    category: statistical_test
+    priority: critical
+  - id: random_pairs
+    metric: random antibody pairs
+    patterns: ["random[^\\n]{0,30}n\\s*=\\s*15[,.]?650"]
+    value: 15650
+    unit: pairs
+    category: statistical_test
+    priority: critical
+  - id: neighbor_pvalue
+    metric: profile-neighbor P value
+    patterns: ["P\\s*<\\s*0\\.001"]
+    value: 0.001
+    unit: upper_bound
+    category: statistical_test
+    priority: critical
+  - id: pca_pc1
+    metric: PCA PC1 explained variance
+    patterns: ["PC1[^\\n]{0,20}32\\.7%"]
+    value: 32.7
+    unit: percent
+    category: pca
+    priority: critical
+  - id: pca_pc2
+    metric: PCA PC2 explained variance
+    patterns: ["PC2[^\\n]{0,80}20\\.8%"]
+    value: 20.8
+    unit: percent
+    category: pca
+    priority: critical
+  - id: pca_pc3
+    metric: PCA PC3 explained variance
+    patterns: ["PC3[^\\n]{0,80}16\\.1%"]
+    value: 16.1
+    unit: percent
+    category: pca
+    priority: critical
+  - id: pca_first_two
+    metric: first two PCs explained variance
+    patterns: ["first two (?:PCs|components)[^\\n]{0,80}53\\.5%", "PC1 and PC2[^\\n]{0,120}53\\.5%", "accounting together for\\s+53\\.5%"]
+    value: 53.5
+    unit: percent
+    category: pca
+    priority: high
+  - id: pca_first_three
+    metric: first three PCs explained variance
+    patterns: ["first three PCs[^\\n]{0,40}69\\.6%"]
+    value: 69.6
+    unit: percent
+    category: pca
+    priority: high

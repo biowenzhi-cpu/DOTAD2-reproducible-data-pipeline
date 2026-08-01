@@ -1,0 +1,40 @@
+metadata:
+  id:
+    - antibody_id
+  name:
+    - antibody_name
+
+sequences:
+  id:
+    - antibody_id
+  name:
+    - antibody_name
+  vh:
+    - VH
+  vl:
+    - VL
+  heavy_full_length:
+    - hc_protein_sequence
+  light_full_length:
+    - lc_protein_sequence
+  cdr:
+    - HCDR1
+    - HCDR2
+    - HCDR3
+    - LCDR1
+    - LCDR2
+    - LCDR3
+
+common_source_fields:
+  id:
+    - antibody_id
+    - Antibody ID
+  name:
+    - antibody_name
+    - Antibody Name
+    - Name
+  source:
+    - source
+    - Source
+    - Reference
+    - PMID
