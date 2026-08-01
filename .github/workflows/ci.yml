@@ -20,4 +20,4 @@ jobs:
       - run: python examples/synthetic/build.py --output build-two
       - run: cmp build-one/synthetic_release.tsv build-two/synthetic_release.tsv
       - run: python -c "from pathlib import Path; text='\n'.join(p.read_text(errors='ignore') for p in Path('.').rglob('*') if p.is_file() and p.suffix in {'.py','.md','.toml','.yml','.json'}); assert '__DATA_DOI__' not in text"
-      - run: python -c "from pathlib import Path; text='\n'.join(p.read_text(errors='ignore') for p in Path('.').rglob('*') if p.is_file() and p.suffix in {'.py','.md','.toml','.yml','.json'}); assert 'C:' + chr(92) + 'Users' + chr(92) not in text"
+      - run: python -c "from pathlib import Path; text='\n'.join(p.read_text(errors='ignore') for p in Path('.').rglob('*') if p.is_file() and p.suffix in {'.py','.md','.toml','.yml','.json'}); assert 'C:' + chr(92) + 'Users' + chr(92) not in text; assert 'C:' + chr(47) + 'Users' + chr(47) not in text"

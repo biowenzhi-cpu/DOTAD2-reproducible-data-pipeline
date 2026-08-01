@@ -4,7 +4,7 @@ title: DOTAD 2.0 reproducible data release pipeline
 type: software
 version: v2.0.0
 url: https://i.uestc.edu.cn/DOTAD2.0/
-repository-code: https://github.com/bioinfowenz/DOTAD2-reproducible-data-pipeline
+repository-code: https://github.com/biowenzhi-cpu/DOTAD2-reproducible-data-pipeline
 authors:
 - family-names: Li
   given-names: Wenzhi

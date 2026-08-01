@@ -10,5 +10,5 @@ sequence_min_cdr_length: 3
 sequence_max_cdr_length: 80
 amino_acid_alphabet: "ACDEFGHIKLMNPQRSTVWYBXZJUO"
 dna_alphabet: "ACGTUNRYKMSWBDHV"
-source_git_root: "C:/Users/14706/Desktop/DOTAD/DOTAD 2.0"
+source_git_root: "."
 expected_archive_top_level: "DOTAD"

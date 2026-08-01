@@ -1402,8 +1402,8 @@ def build_claim_facts(
 ) -> dict[str, dict[str, Any]]:
     facts: dict[str, dict[str, Any]] = {}
     reproduction_command = (
-        'python -m dotad_audit.cli --project-root "C:/Users/14706/Desktop/DOTAD/DOTAD 2.0" '
-        '--manuscript "C:/Users/14706/Desktop/DOTAD2.0 manuscript.docx" '
+        'python -m dotad_audit.cli --project-root "." '
+        '--manuscript "DOTAD2.0 manuscript.docx" '
         '--output-root "audit_outputs/phase1" --claims-only '
         '--data-file "assets/data/dotad_antibody_metadata_sequences_v2.0.xlsx" '
         '--data-file "assets/data/dotad_data_dictionary_v2.0.xlsx" '
