@@ -10,7 +10,7 @@ The repository provides source parsers, normalization, lineage, validation, rele
 
 ## Data access
 
-Real DOTAD data are not included. Use the DOTAD website for data access; the immutable article dataset is preserved in the DOI-bearing archive.
+Real DOTAD data are not included. Use the DOTAD website for data access; the immutable article dataset is preserved at https://doi.org/10.5281/zenodo.21742780.
 
 ## Installation
 
@@ -54,7 +54,7 @@ MIT does not apply to DOTAD data. DOTAD-generated fields and source-derived cont
 
 ## Citation
 
-Use `CITATION.cff` for this software and cite the dataset DOI plus relevant original sources when using data.
+Use `CITATION.cff` for this software and cite the DOTAD 2.0 dataset at https://doi.org/10.5281/zenodo.21742780 plus relevant original sources when using data.
 
 ## Contributing
 

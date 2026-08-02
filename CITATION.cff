@@ -5,6 +5,10 @@ type: software
 version: v2.0.0
 url: https://i.uestc.edu.cn/DOTAD2.0/
 repository-code: https://github.com/biowenzhi-cpu/DOTAD2-reproducible-data-pipeline
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.21742780
+  description: DOTAD 2.0 therapeutic antibody developability dataset
 authors:
 - family-names: Li
   given-names: Wenzhi
