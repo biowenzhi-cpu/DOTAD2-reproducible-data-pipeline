@@ -6,6 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
     steps:
@@ -19,5 +20,62 @@ jobs:
       - run: python examples/synthetic/build.py --output build-one
       - run: python examples/synthetic/build.py --output build-two
       - run: cmp build-one/synthetic_release.tsv build-two/synthetic_release.tsv
-      - run: python -c "from pathlib import Path; text='\n'.join(p.read_text(errors='ignore') for p in Path('.').rglob('*') if p.is_file() and p.suffix in {'.py','.md','.toml','.yml','.json'}); assert '__DATA_DOI__' not in text"
+      - name: Check unresolved DOI placeholders in public metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+
+          token = "__" + "DATA_DOI" + "__"
+          allowed_suffixes = {
+              ".md",
+              ".cff",
+              ".json",
+              ".toml",
+              ".yml",
+              ".yaml",
+          }
+
+          tracked = subprocess.check_output(
+              ["git", "ls-files"],
+              text=True,
+          ).splitlines()
+
+          scan_paths = []
+
+          for item in tracked:
+              path = Path(item)
+
+              if path.suffix.lower() not in allowed_suffixes:
+                  continue
+
+              # Public metadata files in repository root.
+              if len(path.parts) == 1:
+                  scan_paths.append(path)
+                  continue
+
+              # Public documentation below docs/.
+              if path.parts[0] == "docs":
+                  scan_paths.append(path)
+
+          hits = []
+
+          for path in sorted(scan_paths):
+              text = path.read_text(encoding="utf-8", errors="ignore")
+              for line_number, line in enumerate(text.splitlines(), start=1):
+                  if token in line:
+                      hits.append(f"{path}:{line_number}:{line.strip()}")
+
+          if hits:
+              raise SystemExit(
+                  "Unresolved DOI placeholders were found in public metadata:\n"
+                  + "\n".join(hits)
+              )
+
+          print(
+              f"DOI placeholder scan passed for "
+              f"{len(scan_paths)} public metadata files."
+          )
+          PY
       - run: python -c "from pathlib import Path; text='\n'.join(p.read_text(errors='ignore') for p in Path('.').rglob('*') if p.is_file() and p.suffix in {'.py','.md','.toml','.yml','.json'}); assert 'C:' + chr(92) + 'Users' + chr(92) not in text; assert 'C:' + chr(47) + 'Users' + chr(47) not in text"
