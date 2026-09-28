@@ -28,6 +28,8 @@ Run source-specific commands documented in `docs/build.md`. Authoritative files 
 
 Run `python -m pytest`. Tests requiring authoritative data use the `requires_authoritative_data` marker and are skipped by default.
 
+For the September 2026 revised research archive, use `python revision_tools/validate_archive.py path/to/archive.zip`. See [revision scope](docs/revision_archive.md) for the distinction between original source reconstruction and checks of packaged revision products. No real data are added to this repository.
+
 ## Synthetic example
 
 Run `python examples/synthetic/build.py --output build-one` twice and compare the generated SHA-256 values.
