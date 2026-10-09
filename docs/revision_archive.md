@@ -16,6 +16,12 @@ Checks include ZIP integrity and path safety, exact manifest coverage, SHA-256, 
 
 The September revision removes the inadequately documented Garbinski subset, preserves an explicit identifier migration, adds source evidence at the available resolution, and retains the two source-qualified HIC corrections. The final packaging step does not recompute figures, benchmark labels or quantitative matrices. Original construction-input hashes in `authoritative_input_hashes.md` remain historical build pins; they have not been silently replaced with revision-workbook hashes.
 
+## Benchmark download status
+
+As verified on 9 October 2026, the default benchmark download at https://i.uestc.edu.cn/DOTAD2.0/Download.html provides the revised source-stratified package: nine source/endpoint tasks and 2,028 continuous labels. Its `labels.tsv` and `coverage.tsv` match the corresponding products in the research archive. The former pooled v1.1 package is retained as a historical product for reproducibility and audit, rather than as the recommended default.
+
+The benchmark README in the originally deposited ZIP retained the obsolete candidate-stage statement "Not deployed and not a silent replacement of v1.1." This sentence does not describe the current website deployment. A documentation-only correction replaces the deployment statement and the candidate heading; benchmark labels, task coverage and sequence-group splits remain unchanged. The code repository contains validation code and documentation; the data package is distributed through the website and Zenodo.
+
 ## Scope and limits
 
 This is package validation, not a complete rerun of the revision overlay from primary literature or an independent human extraction audit. The original construction pipeline remains documented in `build.md`; earlier manuscript-analysis scripts can require frozen workbooks or prior-stage products not distributed in this code repository. Do not interpret successful public synthetic tests as verification of every primary-source value.
